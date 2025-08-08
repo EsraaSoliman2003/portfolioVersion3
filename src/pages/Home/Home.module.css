@@ -1,0 +1,116 @@
+.home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: calc(100vh - 45px);
+    overflow: hidden;
+}
+
+.mainSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.textSection {
+    flex: 1;
+    max-width: 500px;
+}
+
+.subtitle {
+    color: var(--primary-Mocha);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title {
+    white-space: pre-line;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+    color: var(--primary-dark);
+}
+
+
+.title strong {
+    color: var(--primary-Mocha);
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btnPrimary,
+.btnSecondary {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnPrimary {
+    background-color: var(--btn-primary);
+    color: white;
+}
+
+.btnPrimary:hover {
+    background-color: #4f46e5;
+}
+
+.btnSecondary {
+    background-color: var(--btn-secondary);
+    color: var(--text-color);
+}
+
+.btnSecondary:hover {
+    background-color: #555;
+}
+
+.imgSection {
+    flex: 1;
+}
+
+.heroImage {
+    width: 400px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 2px;
+    color: var(--primary-yellow);
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

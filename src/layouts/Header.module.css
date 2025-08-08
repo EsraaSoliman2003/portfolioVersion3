@@ -1,0 +1,32 @@
+.header {
+  background-color: var(--bg-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+  height: 45px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0077ff;
+}
+
+.active {
+  color: #0077ff;
+  font-weight: bold;
+}

@@ -1,0 +1,79 @@
+/* ========= Variables ========= */
+:root {
+  --font-family-base: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+
+  --color-bg: #f9f9fb;
+  --color-text: #333;
+  --color-primary: #4f46e5;
+  --color-secondary: #6366f1;
+  --color-accent: #eab308;
+  --color-muted: #777;
+
+  --border-radius: 8px;
+  --transition-base: 0.3s ease;
+}
+
+/* ========= Font Import ========= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ========= Reset ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========= Base Styles ========= */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+a:hover {
+  color: var(--color-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+}
+
+/* ========= Button ========= */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+/* ========= Utility Classes ========= */
+.text-center {
+  text-align: center;
+}
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.p-2 { padding: 1rem; }
+.rounded { border-radius: var(--border-radius); }
