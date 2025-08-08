@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Home, Contact } from "lucide-react";
+import { Home, User, Folder, Mail, Briefcase, Award } from "lucide-react";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -21,7 +21,7 @@ function Header() {
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
         >
-          <Contact size={18} /> About
+          <User size={18} /> About
         </NavLink>
         <NavLink
           to="/projects"
@@ -29,7 +29,7 @@ function Header() {
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
         >
-          <Contact size={18} /> Projects
+          <Folder size={18} /> Projects
         </NavLink>
         <NavLink
           to="/contact"
@@ -37,7 +37,23 @@ function Header() {
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
         >
-          <Contact size={18} /> Contact
+          <Mail size={18} /> Contact
+        </NavLink>
+        <NavLink
+          to="/experience"
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.active}` : styles.link
+          }
+        >
+          <Briefcase size={18} /> Experience
+        </NavLink>
+        <NavLink
+          to="/certificates"
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.active}` : styles.link
+          }
+        >
+          <Award size={18} /> Certificates
         </NavLink>
       </nav>
     </header>

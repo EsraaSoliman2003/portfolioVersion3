@@ -1,5 +1,5 @@
 Portfolio Website
-A static portfolio website built with Vite and React, showcasing About, Projects, Experience, and Contact sections. This project is designed to be a clean, responsive, and professional frontend-only portfolio with no backend dependencies.
+A static portfolio website built with Vite and React, showcasing Home, About, Projects, Experience, Certificates, and Contact sections. This project is designed to be a clean, responsive, and professional frontend-only portfolio with no backend dependencies.
 
 Table of Contents
 
@@ -27,7 +27,7 @@ Project Structure
 your-portfolio/
 ├── public/ # Public assets (images, favicon, etc.)
 │ ├── images/ # Static images for projects, profile, etc.
-│ └── favicon.ico
+│ └── icon.png
 ├── src/
 │ ├── assets/ # Compiled assets (used in code)
 │ │ ├── images/ # Images imported in components
@@ -47,10 +47,13 @@ your-portfolio/
 │ │ ├── experience.json # Work experience details
 │ │ └── about.json # About section content
 │ ├── layouts/ # Layout components
-│ │ ├── MainLayout.jsx # Main layout with header/footer
-│ │ ├── Header.jsx # Navigation header
-│ │ └── Footer.jsx # Footer component
+│ │ ├── MainLayout.jsx # Main layout with header
+│ │ └── Header.jsx # Navigation header
 │ ├── pages/ # Page-level components
+│ │ ├── Home/
+│ │ │ ├── Home.jsx # Contact page
+│ │ │ ├── Home.module.css
+│ │ │ └── index.js
 │ │ ├── About/
 │ │ │ ├── About.jsx # About page
 │ │ │ ├── About.module.css
@@ -67,10 +70,10 @@ your-portfolio/
 │ │ │ ├── Contact.jsx # Contact page
 │ │ │ ├── Contact.module.css
 │ │ │ └── index.js
-│ │ └── Home/
-│ │ ├── Home.jsx # Home page
-│ │ ├── Home.module.css
-│ │ └── index.js
+│ │ └── Certificates/
+│ │   ├── Contact.jsx # Contact page
+│ │   ├── Contact.module.css
+│ │   └── index.js
 │ ├── styles/ # Global styles
 │ ├── App.jsx # Main app component
 │ ├── main.jsx # Entry point of the app
