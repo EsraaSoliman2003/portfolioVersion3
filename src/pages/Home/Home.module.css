@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    height: calc(100vh - 45px);
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -114,9 +114,13 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .mainSection{
         flex-direction: column;
+    }
+    .textSection {
+        margin-top: 30px;
+        flex: 0;
     }
     .title {
         font-size: 1.8rem;
@@ -126,3 +130,11 @@
     }
 }
 
+@media (max-width: 375px) {
+    .textSection {
+        margin-top: 20px;
+    }
+    .heroImage {
+        width: 280px;
+    }
+}
