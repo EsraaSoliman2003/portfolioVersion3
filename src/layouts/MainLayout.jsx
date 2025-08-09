@@ -5,9 +5,11 @@ import { Outlet } from "react-router-dom";
 import CustomCursor from "../components/CustomCursor/CustomCursor";
 
 const MainLayout = () => {
+  const isDesktop = window.innerWidth > 768;
+
   return (
     <>
-      <CustomCursor />
+      {isDesktop && <CustomCursor />}
       <Header />
       <main>
         <Outlet />
