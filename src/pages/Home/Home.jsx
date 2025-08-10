@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 import myImage from "../../../public/images/me.png";
 
-const fullText = "Hello, I'm Esraa Soliman\nReactJS Developer\nI'm in this field since 2022";
+const fullText = "Hello, I'm Esraa Soliman\nReactJS Developer";
 
 const Home = () => {
   const [text, setText] = useState("");
@@ -13,7 +13,7 @@ const Home = () => {
       const timeout = setTimeout(() => {
         setText((prev) => prev + fullText.charAt(index));
         setIndex((prev) => prev + 1);
-      }, 100);
+      }, 65);
       return () => clearTimeout(timeout);
     }
   }, [index]);
