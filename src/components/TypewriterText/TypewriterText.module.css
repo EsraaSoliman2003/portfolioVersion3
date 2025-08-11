@@ -1,0 +1,18 @@
+.wrapper {
+  font-weight: bold;
+  color: var(--primary-Mocha);
+  font-size: 2rem;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

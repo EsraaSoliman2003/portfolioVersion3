@@ -1,45 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import projectsData from "../../data/projects.json";
 import styles from "./Projects.module.css";
+import TypewriterText from "../../components/TypewriterText/TypewriterText";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("Top");
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
-  // ترتيب المشاريع حسب priority
-  const sortedProjects = [...projectsData].sort((a, b) => a.priority - b.priority);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  // كل الفئات
   const categories = [...new Set(projectsData.map((p) => p.category))];
 
-  // فلترة المشاريع
-  const filteredProjects = sortedProjects.filter((p) => p.category === selectedCategory);
+  const filteredProjects = projectsData.filter(
+    (p) => p.category === selectedCategory
+  );
 
-  // إعدادات الحركة
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 }
-    }
+      transition: { staggerChildren: 0.15 },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-    exit: { opacity: 0, y: -30, transition: { duration: 0.3 } }
+    exit: { opacity: 0, y: -30, transition: { duration: 0.3 } },
   };
 
   return (
     <div className={styles.projectsContainer}>
-      <h1 className={styles.projectsTitle}>My Projects</h1>
-
-      {/* أزرار الفلتر */}
+      <TypewriterText text="Projects" speed={100} />
       <div className={styles.filters}>
         {categories.map((cat, i) => (
           <button
             key={i}
-            className={`${styles.filterBtn} ${selectedCategory === cat ? styles.active : ""}`}
+            className={`${styles.filterBtn} ${
+              selectedCategory === cat ? styles.active : ""
+            }`}
             onClick={() => setSelectedCategory(cat)}
           >
             {cat}
@@ -47,7 +53,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* الشبكة */}
       <motion.div
         className={styles.projectsGrid}
         variants={containerVariants}
@@ -65,17 +70,43 @@ export default function Projects() {
               exit="exit"
               layout
             >
-              <img
-                src={project.imhPath}
-                alt={project.ProjectTitle}
-                className={styles.projectImg}
-              />
-              <div className={styles.projectOverlay}>
-                <div>
-                  <h2>{project.ProjectTitle}</h2>
-                  <p>{project.date}</p>
-                </div>
-              </div>
+              <a
+                href={
+                  project.linkDesine !== "-" ? project.linkDesine : project.linkGithub
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectLink}
+              >
+                <img
+                  src={project.imhPath}
+                  alt={project.ProjectTitle}
+                  className={styles.projectImg}
+                />
+                {isSmallScreen ? (
+                  <div className={styles.projectText}>
+                    <h2>{project.ProjectTitle}</h2>
+                    <p>
+                      <strong>Date:</strong> {project.date}
+                    </p>
+                    <p>
+                      <strong>Tools:</strong> {project.tools}
+                    </p>
+                  </div>
+                ) : (
+                  <div className={styles.projectOverlay}>
+                    <div className={styles.projectText}>
+                      <h2>{project.ProjectTitle}</h2>
+                      <p>
+                        <strong>Date:</strong> {project.date}
+                      </p>
+                      <p>
+                        <strong>Tools:</strong> {project.tools}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </a>
             </motion.div>
           ))}
         </AnimatePresence>
