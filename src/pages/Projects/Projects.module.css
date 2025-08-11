@@ -131,6 +131,9 @@
   transition: all 0.4s ease;
   width: 85%;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .projectItem:hover .projectText {
@@ -231,6 +234,8 @@
   }
 
   .projectImg {
+    height: auto;
+    min-height: 50%;
     width: 70%;
     margin: auto;
   }
@@ -264,7 +269,12 @@
   }
 
   .projectImg {
-    width: 45%;
-    margin: auto;
+    width: 55%;
+  }
+}
+
+@media (max-width: 400px) {
+  .projectImg {
+    width: 80%;
   }
 }
