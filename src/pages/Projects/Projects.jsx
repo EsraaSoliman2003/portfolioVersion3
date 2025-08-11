@@ -16,11 +16,15 @@ export default function Projects() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const categories = [...new Set(projectsData.map((p) => p.category))];
+  const order = ["Top", "Modern", "Complex", "Native", "BackEnd"];
 
-  const filteredProjects = projectsData.filter(
-    (p) => p.category === selectedCategory
+  const categories = [...new Set(projectsData.map((p) => p.category))].sort(
+    (a, b) => order.indexOf(a) - order.indexOf(b)
   );
+
+  const filteredProjects = projectsData
+    .filter((p) => p.category === selectedCategory)
+    .sort((a, b) => order.indexOf(a.category) - order.indexOf(b.category));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -72,7 +76,9 @@ export default function Projects() {
             >
               <a
                 href={
-                  project.linkDesine !== "-" ? project.linkDesine : project.linkGithub
+                  project.linkDesine !== "-"
+                    ? project.linkDesine
+                    : project.linkGithub
                 }
                 target="_blank"
                 rel="noopener noreferrer"
