@@ -42,7 +42,7 @@ function Header() {
         sx={{
           backgroundColor: "transparent",
           boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-          width: { xs: "fit-content", md: "100%" },
+          // width: { xs: "fit-content", md: "100%" },
           direction: "rtl",
         }}
       >
