@@ -5,7 +5,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/project1/project1.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/project1",
     "tools": "HTML & CSS",
-    "imhPath": "/images/1.png",
+    "imhPath": "/images/projects/1.png",
     "desc": "A simple, responsive landing page built with HTML & CSS, showcasing clean design and layout skills.",
     "category": "Native",
     "priority": 1
@@ -16,7 +16,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/project3/project3.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/project3",
     "tools": "HTML & CSS",
-    "imhPath": "/images/2.png",
+    "imhPath": "/images/projects/2.png",
     "desc": "Another HTML & CSS landing page with a modern layout and responsive design.",
     "category": "Native",
     "priority": 2
@@ -27,7 +27,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/project2/project2.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/project2",
     "tools": "HTML & CSS",
-    "imhPath": "/images/3.png",
+    "imhPath": "/images/projects/3.png",
     "desc": "A static website template focused on typography and section organization using HTML & CSS.",
     "category": "Native",
     "priority": 3
@@ -38,7 +38,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/bondi/pro.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/bondi",
     "tools": "HTML & CSS & Bootstrap",
-    "imhPath": "/images/4.png",
+    "imhPath": "/images/projects/4.png",
     "desc": "A responsive Bootstrap template with styled sections and modern UI elements.",
     "category": "Native",
     "priority": 4
@@ -49,7 +49,7 @@
     "linkDesine": "https://todo-list-gilt-gamma-20.vercel.app",
     "linkGithub": "https://github.com/EsraaSoliman2003/TODO-List",
     "tools": "NextJS, MUI, Next-Auth",
-    "imhPath": "/images/5.png",
+    "imhPath": "/images/projects/5.png",
     "desc": "A task management app built with Next.js and MongoDB, supporting CRUD operations.",
     "category": "Native",
     "priority": 13
@@ -60,7 +60,7 @@
     "linkDesine": "https://sales-brown-six.vercel.app/",
     "linkGithub": "https://github.com/EsraaSoliman2003/Sales",
     "tools": "React & Vite & MUI & ReduxJS & Framer-Motion & Xlsx",
-    "imhPath": "/images/6.png",
+    "imhPath": "/images/projects/6.png",
     "desc": "A complete sales and inventory management system built with React, MUI, and various libraries.",
     "category": "Complex",
     "priority": 5
@@ -71,7 +71,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/Memory-Game/pro.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/Memory-Game",
     "tools": "HTML & CSS & JS",
-    "imhPath": "/images/7.png",
+    "imhPath": "/images/projects/7.png",
     "desc": "A card-based memory matching game developed with HTML, CSS, and JavaScript.",
     "category": "Complex",
     "priority": 8
@@ -82,7 +82,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/HangMan-Game/pro.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/HangMan-Game",
     "tools": "HTML & CSS & JS",
-    "imhPath": "/images/8.png",
+    "imhPath": "/images/projects/8.png",
     "desc": "A fun Hangman word-guessing game built with HTML, CSS, and JavaScript.",
     "category": "Complex",
     "priority": 9
@@ -93,7 +93,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/Typing-Speed/pro.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/Typing-Speed",
     "tools": "HTML & CSS & JS",
-    "imhPath": "/images/9.png",
+    "imhPath": "/images/projects/9.png",
     "desc": "An interactive typing speed test game built with HTML, CSS, and JavaScript.",
     "category": "Complex",
     "priority": 7
@@ -105,7 +105,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/Travel/index.html",
     "linkGithub": "https://github.com/EsraaSoliman2003/Travel",
     "tools": "HTML & CSS & JS & Swiper & ScrollReveal & Google Maps",
-    "imhPath": "/images/10.png",
+    "imhPath": "/images/projects/10.png",
     "desc": "A travel-themed website with responsive design, using Bootstrap and JavaScript for interactivity.",
     "category": "Top",
     "priority": 6
@@ -116,7 +116,7 @@
     "linkDesine": "https://esraasoliman2003.github.io/Fooder",
     "linkGithub": "https://github.com/EsraaSoliman2003/Fooder",
     "tools": "HTML & CSS & React & Swiper",
-    "imhPath": "/images/11.png",
+    "imhPath": "/images/projects/11.png",
     "desc": "A food delivery website built with React, offering a clean design and responsive layout.",
     "category": "Top",
     "priority": 10
@@ -127,7 +127,7 @@
     "linkDesine": "https://dashboard2024.surge.sh",
     "linkGithub": "https://github.com/EsraaSoliman2003/Admin-Dashboard",
     "tools": "React & MUI & FullCalendar & Nivo Charts & React Hook Form",
-    "imhPath": "/images/12.png",
+    "imhPath": "/images/projects/12.png",
     "desc": "An admin dashboard built with React and MUI, featuring data visualization and management tools.",
     "category": "Top",
     "priority": 11
@@ -138,7 +138,7 @@
     "linkDesine": "https://electronic-menu.vercel.app",
     "linkGithub": "https://github.com/EsraaSoliman2003/Electronic-menu",
     "tools": "React & Vite & MUI & Tailwind",
-    "imhPath": "/images/13.png",
+    "imhPath": "/images/projects/13.png",
     "desc": "A task management app built with Next.js and MongoDB, supporting CRUD operations.",
     "category": "Top",
     "priority": 14
@@ -149,7 +149,7 @@
     "linkDesine": "https://esraa-soliman.vercel.app",
     "linkGithub": "https://github.com/EsraaSoliman2003/newPortfolio",
     "tools": "Next.js & MUI & Framer Motion & Lottie & Formspree",
-    "imhPath": "/images/14.png",
+    "imhPath": "/images/projects/14.png",
     "desc": "",
     "category": "Top",
     "priority": 14
@@ -160,7 +160,7 @@
     "linkDesine": "https://bagsshop.surge.sh",
     "linkGithub": "https://github.com/EsraaSoliman2003/BagsShop",
     "tools": "React & MUI",
-    "imhPath": "/images/15.png",
+    "imhPath": "/images/projects/15.png",
     "desc": "An online shop for bags built with React and MUI, with a modern and responsive design.",
     "category": "Modern",
     "priority": 12
@@ -171,7 +171,7 @@
     "linkDesine": "https://ecomerce-omega-eosin.vercel.app",
     "linkGithub": "https://github.com/EsraaSoliman2003/Ecomerce",
     "tools": "NextJS & Bootstrab",
-    "imhPath": "/images/16.png",
+    "imhPath": "/images/projects/16.png",
     "desc": "An online shop for bags built with React and MUI, with a modern and responsive design.",
     "category": "Modern",
     "priority": 12
@@ -182,7 +182,7 @@
     "linkDesine": "https://lamamia-ekyw.vercel.app/",
     "linkGithub": "https://github.com/EsraaSoliman2003/lamamia",
     "tools": "NextJS & SWR",
-    "imhPath": "/images/17.png",
+    "imhPath": "/images/projects/17.png",
     "desc": "An online shop for bags built with React and MUI, with a modern and responsive design.",
     "category": "Modern",
     "priority": 12
@@ -193,7 +193,7 @@
     "linkDesine": "https://portfolio-five-sable-68.vercel.app",
     "linkGithub": "https://github.com/EsraaSoliman2003/Portfolio",
     "tools": "React & Framer Motion & Lottie & Formspree",
-    "imhPath": "/images/18.png",
+    "imhPath": "/images/projects/18.png",
     "desc": "An online shop for bags built with React and MUI, with a modern and responsive design.",
     "category": "Modern",
     "priority": 12
@@ -204,7 +204,7 @@
     "linkDesine": "-",
     "linkGithub": "https://github.com/EsraaSoliman2003/TextEditor",
     "tools": ".NET 8 & MVC & Entity Framework Core & SQL Server & Identity",
-    "imhPath": "/images/19.png",
+    "imhPath": "/images/projects/19.png",
     "desc": "A backend system for managing Text and Documents, built with ASP.NET Core MVC and SQL Server.",
     "category": "BackEnd",
     "priority": 15
@@ -215,7 +215,7 @@
     "linkDesine": "-",
     "linkGithub": "https://github.com/EsraaSoliman2003/PizzaMenu",
     "tools": ".NET 8 & MVC & Entity Framework Core & SQL Server",
-    "imhPath": "/images/20.png",
+    "imhPath": "/images/projects/20.png",
     "desc": "A backend menu management system allowing creation, updating, and searching of dishes, built with ASP.NET Core MVC and SQL Server.",
     "category": "BackEnd",
     "priority": 16
@@ -226,7 +226,7 @@
     "linkDesine": "-",
     "linkGithub": "https://github.com/EsraaSoliman2003/ProjectMVC",
     "tools": ".NET 9 & Entity Framework Core 9 & SQL Server",
-    "imhPath": "/images/21.png",
+    "imhPath": "/images/projects/21.png",
     "desc": "A university portal for students and faculty with authentication, role-based access control, and academic management features.",
     "category": "BackEnd",
     "priority": 17

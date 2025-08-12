@@ -1,0 +1,157 @@
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 5.5rem;
+    color: var(--text-color, #333);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    user-select: none;
+    align-items: center;
+}
+
+.techSection {
+    width: 100%;
+    max-width: 800px;
+    background: linear-gradient(135deg, rgba(189, 156, 123, 0.15), rgba(255, 255, 255, 0.05));
+    border-left: 8px solid var(--primary-Mocha, #BD9C7B);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(189, 156, 123, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-Mocha, #BD9C7B);
+    margin-bottom: 2.5rem;
+    letter-spacing: 1.2px;
+
+    align-self: flex-start;
+    position: relative;
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-Mocha, #BD9C7B);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.sectionTitle:hover::after {
+    width: 100px;
+}
+
+.techGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.techCard {
+    background: var(--bg-primary, #ffffff);
+    width: 120px;
+    height: 130px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 8px rgba(189, 156, 123, 0.25);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 0.8rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.techCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(189, 156, 123, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.techLogo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+    filter: drop-shadow(0 0 4px rgba(189, 156, 123, 0.8));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.techCard:hover .techLogo {
+    transform: scale(1.2);
+
+}
+
+.techTitle {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--primary-Mocha, #BD9C7B);
+    user-select: none;
+    text-align: center;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.5rem;
+                margin: 40px auto;
+
+    }
+
+    .techSection {
+        max-width: 100%;
+        border-left-width: 6px;
+        padding: 2rem 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .techCard {
+        width: 100px;
+        height: 110px;
+    }
+
+    .techLogo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .techGrid {
+        gap: 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.6rem;
+    }
+
+    .techCard {
+        width: 90px;
+        height: 100px;
+        padding: 1rem 0.5rem;
+    }
+}
