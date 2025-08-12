@@ -143,40 +143,39 @@
 }
 
 @media (max-width: 768px) {
-  .home {
-    height: auto;
-    padding: 1rem;
-  }
+    .home {
+        height: auto;
+        padding: 1rem;
+    }
 
-  .mainSection {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    gap: 2rem;
-    padding-bottom: 2rem;
-  }
+    .mainSection {
+        flex-direction: column;
+        height: auto;
+    }
 
-  .textSection {
-    max-width: 90vw;
-    margin: 0 auto;
-    text-align: center;
-  }
+    .textSection {
+        flex: none;
+        max-width: 90vw;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-  .title {
-    font-size: 6vw;
-    line-height: 1.2;
-  }
+    .title {
+        font-size: 5vw;
+        line-height: 1.3;
+        font-size: 2rem;
+    }
 
-  .socialLinks {
-    justify-content: center;
-    margin: 1.5rem 0;
-  }
+    .socialLinks {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
 
-  .heroImage {
-    width: auto;
-    max-width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: relative;
-  }
+    .heroImage {
+        position: relative;
+        width: auto;
+        max-width: 80vw;
+        height: 100%;
+        object-fit: contain;
+    }
 }
