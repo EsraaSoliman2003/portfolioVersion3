@@ -8,21 +8,44 @@ const MainLayout = () => {
   const [visits, setVisits] = useState(null);
 
   useEffect(() => {
+    const localFlagKey = "visitor-counted-date";
+    const today = new Date().toDateString();
+    const savedDay = localStorage.getItem(localFlagKey);
+
     async function incrementVisits() {
-      try {
-        const res = await fetch(
-          `${import.meta.env.VITE_UPSTASH_URL}/incr/visits`,
-          {
-            headers: {
-              Authorization: `Bearer ${import.meta.env.VITE_UPSTASH_TOKEN}`,
-            },
-          }
-        );
-        const data = await res.json();
-        setVisits(data.result);
-      } catch (err) {
-        console.error(err);
-        setVisits("Error");
+      if (savedDay !== today) {
+        try {
+          const res = await fetch(
+            `${import.meta.env.VITE_UPSTASH_URL}/incr/visits`,
+            {
+              headers: {
+                Authorization: `Bearer ${import.meta.env.VITE_UPSTASH_TOKEN}`,
+              },
+            }
+          );
+          const data = await res.json();
+          setVisits(data.result);
+          localStorage.setItem(localFlagKey, today);
+        } catch (err) {
+          console.error(err);
+          setVisits("Error");
+        }
+      } else {
+        try {
+          const res = await fetch(
+            `${import.meta.env.VITE_UPSTASH_URL}/get/visits`,
+            {
+              headers: {
+                Authorization: `Bearer ${import.meta.env.VITE_UPSTASH_TOKEN}`,
+              },
+            }
+          );
+          const data = await res.json();
+          setVisits(data.result);
+        } catch (err) {
+          console.error(err);
+          setVisits("Error");
+        }
       }
     }
 
