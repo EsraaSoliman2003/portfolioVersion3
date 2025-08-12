@@ -145,7 +145,7 @@
 @media (max-width: 768px) {
     .home {
         height: auto;
-        padding: 1rem;
+        padding: 1rem 1rem 0;
     }
 
     .mainSection {
@@ -168,7 +168,7 @@
 
     .socialLinks {
         justify-content: center;
-        margin-bottom: 1.5rem;
+        /* margin-bottom: 1.5rem; */
     }
 
     .heroImage {
