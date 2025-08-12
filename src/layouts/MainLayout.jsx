@@ -5,13 +5,28 @@ import CustomCursor from "../components/CustomCursor/CustomCursor";
 
 const MainLayout = () => {
   const isDesktop = window.innerWidth > 768;
-  const [visits, setVisits] = useState(0);
+  const [visits, setVisits] = useState(null);
 
   useEffect(() => {
-    fetch("/api/visits")
-      .then((res) => res.json())
-      .then((data) => setVisits(data.visits))
-      .catch((err) => console.error(err));
+    async function incrementVisits() {
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_UPSTASH_URL}/incr/visits`,
+          {
+            headers: {
+              Authorization: `Bearer ${import.meta.env.VITE_UPSTASH_TOKEN}`,
+            },
+          }
+        );
+        const data = await res.json();
+        setVisits(data.result);
+      } catch (err) {
+        console.error(err);
+        setVisits("Error");
+      }
+    }
+
+    incrementVisits();
   }, []);
 
   return (
@@ -32,7 +47,7 @@ const MainLayout = () => {
             right: "20px",
           }}
         >
-          👀 Visitors: {visits === 0 ? "Loading..." : visits}
+          👀 Visitors: {visits === null ? "Loading..." : visits}
         </div>
       </main>
     </>
