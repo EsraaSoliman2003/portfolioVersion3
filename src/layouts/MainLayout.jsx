@@ -11,7 +11,11 @@ const MainLayout = () => {
     <>
       {isDesktop && <CustomCursor />}
       <Header />
-      <main>
+      <main
+        style={{
+          padding: window.innerWidth > 768 ? "100px 0" : "20px 0",
+        }}
+      >
         <Outlet />
       </main>
     </>

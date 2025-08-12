@@ -5,8 +5,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    height: 100vh;
-    overflow: hidden;
+    height: calc(100vh - 200px);
 }
 
 .mainSection {
@@ -83,7 +82,7 @@
     flex: 1;
     height: 100vh;
     position: relative;
-    
+
 }
 
 .heroImage {
@@ -115,17 +114,20 @@
 }
 
 @media (max-width: 768px) {
-    .mainSection{
+    .mainSection {
         flex-direction: column;
     }
+
     .textSection {
         margin-top: 30px;
         flex: 0;
         max-width: 350px;
     }
+
     .title {
         font-size: 2.3rem;
     }
+
     .heroImage {
         width: 300px;
     }
@@ -135,6 +137,7 @@
     .textSection {
         margin-top: 20px;
     }
+
     .heroImage {
         width: 280px;
     }

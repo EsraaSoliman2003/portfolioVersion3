@@ -1,7 +1,7 @@
 .projectsContainer {
   max-width: 1200px;
   margin: auto;
-  padding: 6rem 2rem 0;
+  padding: 0 2rem;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -205,10 +205,6 @@
 }
 
 @media (max-width: 768px) {
-  .projectsContainer {
-    padding: 2rem;
-  }
-
   .projectsGrid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
