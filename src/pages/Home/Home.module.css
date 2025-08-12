@@ -24,6 +24,26 @@
     align-content: center;
 }
 
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.iconLink {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.iconLink:hover {
+    transform: scale(1.2);
+    color: var(--primary-Mocha);
+}
+
 .title {
     white-space: pre-line;
     font-size: 2.5rem;
@@ -67,6 +87,15 @@
 
 .btnPrimary:hover {
     background-color: #4f46e5;
+}
+
+.btnCV {
+    background-color: var(--primary-Mocha);
+}
+
+.btnCV:hover {
+    background-color: var(--primary-Mocha);
+    color: white;
 }
 
 .btnSecondary {
@@ -121,15 +150,15 @@
     .textSection {
         margin-top: 30px;
         flex: 0;
-        max-width: 350px;
+        max-width: 300px;
     }
 
     .title {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
     }
 
     .heroImage {
-        width: 300px;
+        width: 240px;
     }
 }
 
@@ -139,6 +168,6 @@
     }
 
     .heroImage {
-        width: 280px;
+        width: 200px;
     }
 }

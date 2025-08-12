@@ -78,7 +78,9 @@ export default function Projects() {
                 href={
                   project.linkDesine !== "-"
                     ? project.linkDesine
-                    : project.linkGithub
+                    : project.linkGithub !== "-"
+                    ? project.linkGithub
+                    : null
                 }
                 target="_blank"
                 rel="noopener noreferrer"

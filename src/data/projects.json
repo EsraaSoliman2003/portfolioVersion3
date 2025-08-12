@@ -57,8 +57,8 @@
   {
     "ProjectTitle": "Factory system",
     "date": "2025",
-    "linkDesine": "https://sales-brown-six.vercel.app/",
-    "linkGithub": "https://github.com/EsraaSoliman2003/Sales",
+    "linkDesine": "-",
+    "linkGithub": "-",
     "tools": "React & Vite & MUI & ReduxJS & Framer-Motion & Xlsx",
     "imhPath": "/images/projects/6.png",
     "desc": "A complete sales and inventory management system built with React, MUI, and various libraries.",
