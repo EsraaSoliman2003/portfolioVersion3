@@ -143,6 +143,10 @@
 }
 
 @media (max-width: 768px) {
+    .home {
+        height: calc(100vh - 40px);
+    }
+
     .mainSection {
         flex-direction: column;
     }
