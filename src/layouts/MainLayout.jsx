@@ -1,4 +1,3 @@
-// layouts/MainLayout.jsx
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
@@ -9,9 +8,9 @@ const MainLayout = () => {
   const [visits, setVisits] = useState(0);
 
   useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/esraa-ebrahim-soliman-site/visits")
+    fetch("/api/visits")
       .then((res) => res.json())
-      .then((data) => setVisits(data.value))
+      .then((data) => setVisits(data.visits))
       .catch((err) => console.error(err));
   }, []);
 
@@ -33,7 +32,7 @@ const MainLayout = () => {
             right: "20px",
           }}
         >
-          👀 Visitors: {visits}
+          👀 Visitors: {visits === 0 ? "Loading..." : visits}
         </div>
       </main>
     </>
