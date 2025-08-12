@@ -1,0 +1,42 @@
+{
+  "tools": [
+    { "title": "HTML", "logo": "/images/technologies/html.png" },
+    { "title": "CSS", "logo": "/images/technologies/css.png" },
+    { "title": "JavaScript", "logo": "/images/technologies/js.png" },
+    { "title": "Vite", "logo": "/images/technologies/vite.png" },
+    { "title": ".NET", "logo": "/images/technologies/.net.png" },
+    { "title": "SQLServer", "logo": "/images/technologies/sql.png" }
+  ],
+
+  "frameworks": [
+    { "title": "Next.js", "logo": "/images/technologies/next.png" },
+    { "title": "Bootstrap", "logo": "/images/technologies/bootstrap.png" },
+    { "title": "Tailwind", "logo": "/images/technologies/tailwind.png" },
+    { "title": "MUI", "logo": "/images/technologies/mui.png" },
+    {
+      "title": "EF Core",
+      "logo": "/images/technologies/Entity-Framework.png"
+    }
+  ],
+
+  "libraries": [
+    { "title": "React", "logo": "/images/technologies/react.png" },
+    { "title": "Redux", "logo": "/images/technologies/redux.png" },
+    {
+      "title": "Framer Motion",
+      "logo": "/images/technologies/framer-motion.png"
+    },
+    { "title": "Lottie", "logo": "/images/technologies/lottie.png" },
+    { "title": "Formspree", "logo": "/images/technologies/formspree.png" },
+    { "title": "Next-Auth", "logo": "/images/technologies/next-auth.png" },
+    { "title": "Xlsx", "logo": "/images/technologies/xlsx.png" },
+    { "title": "Full Calendar", "logo": "/images/technologies/fullcalendar.png" },
+    { "title": "Nivo Charts", "logo": "/images/technologies/nivo.png" },
+    {
+      "title": "Hook Form",
+      "logo": "/images/technologies/react-hook-form.png"
+    },
+    { "title": "Swiper", "logo": "/images/technologies/swiper.png" },
+    { "title": "ScrollReveal", "logo": "/images/technologies/scrollreveal.png" }
+  ]
+}

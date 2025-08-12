@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "./Experience.module.css";
+import styles from "./Technologies.module.css";
 import { motion } from "framer-motion";
-import data from "../../data/experiences.json";
+import data from "../../data/technologies.json";
+import TypewriterText from "../../components/TypewriterText/TypewriterText";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -15,7 +16,7 @@ const containerVariants = {
   },
 };
 
-export default function Experience() {
+export default function Technologies() {
   return (
     <motion.section
       className={styles.container}
@@ -29,7 +30,8 @@ export default function Experience() {
         { title: "Libraries", items: data.libraries },
       ].map(({ title, items }) => (
         <div key={title} className={styles.techSection}>
-          <h3 className={styles.sectionTitle}>{title}</h3>
+          {/* <h3 className={styles.sectionTitle}>{title}</h3> */}
+          <TypewriterText text={title} />
           <div className={styles.techGrid}>
             {items.map(({ title, logo }) => (
               <div key={title} className={styles.techCard}>

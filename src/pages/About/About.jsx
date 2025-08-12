@@ -13,10 +13,13 @@ const About = () => {
       >
         <TypewriterText text="About" />
         <p className={styles.text}>
-          I am a dedicated and passionate individual who loves blending
-          creativity with technology to craft engaging digital experiences. I
-          thrive on challenges and continuously seek to improve my skills while
-          bringing innovative ideas to life.
+          I am a dedicated and results-driven individual who combines creativity
+          with practical execution to craft engaging and functional digital
+          experiences. I am hardworking, highly efficient, and detail-oriented,
+          with a strong focus on delivering high-quality results and writing
+          clean, maintainable code. I thrive on challenges, stay focused on
+          objectives, and continuously work to improve my skills while bringing
+          innovative ideas to life.
         </p>
       </motion.div>
     </section>

@@ -30,8 +30,8 @@ function Header() {
     { to: "/about", label: "About", icon: <User size={18} /> },
     { to: "/projects", label: "Projects", icon: <Folder size={18} /> },
     { to: "/contact", label: "Contact", icon: <Mail size={18} /> },
-    { to: "/experience", label: "Experience", icon: <Briefcase size={18} /> },
-    { to: "/certificates", label: "Certificates", icon: <Award size={18} /> },
+    { to: "/technologies", label: "Technologies", icon: <Briefcase size={18} /> },
+    // { to: "/certificates", label: "Certificates", icon: <Award size={18} /> },
   ];
 
   return (
