@@ -42,7 +42,7 @@ export default function Projects() {
 
   return (
     <div className={styles.projectsContainer}>
-      <TypewriterText text="Projects" speed={100} />
+      <TypewriterText text="Projects" />
       <div className={styles.filters}>
         {categories.map((cat, i) => (
           <button
