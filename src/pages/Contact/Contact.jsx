@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./Contact.module.css";
-import { Mail, MapPin, Send } from "lucide-react";
 import TypewriterText from "../../components/TypewriterText/TypewriterText";
 import Lottie from "lottie-react";
 import contactAnimation from "../../assets/animations/contact.json";
+import doneanimation from "../../assets/animations/done.json";
 import { motion } from "framer-motion";
+import { useForm, ValidationError } from "@formspree/react";
 
 function Contact() {
+  const [state, handleSubmit] = useForm("xgvzdozr");
+
   return (
     <section className={styles.container}>
       <motion.div
@@ -24,13 +27,17 @@ function Contact() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              <Lottie className={styles.test} animationData={contactAnimation} loop={true} />
+              <Lottie
+                className={styles.test}
+                animationData={contactAnimation}
+                loop={true}
+                style={{ width: "100%", maxWidth: "450px", maxHeight: "450px" }}
+              />
             </motion.div>
           </div>
 
           <motion.form
-            action="https://formspree.io/f/yourFormID"
-            method="POST"
+            onSubmit={handleSubmit}
             className={styles.form}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,15 +50,23 @@ function Contact() {
               required
               className={styles.input}
               aria-label="Your Name"
+              disabled={state.submitting}
             />
             <input
               type="email"
-              name="_replyto"
+              name="email"
               placeholder="Your Email"
               required
               className={styles.input}
               aria-label="Your Email"
+              disabled={state.submitting}
             />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+
             <textarea
               name="message"
               placeholder="Your Message"
@@ -59,14 +74,37 @@ function Contact() {
               required
               className={styles.textarea}
               aria-label="Your Message"
+              disabled={state.submitting}
             ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+
             <button
               type="submit"
               className={styles.button}
               aria-label="Send Message"
+              disabled={state.submitting}
             >
-              <Send className="w-5 h-5 mr-2" /> Send Message
+              {state.submitting ? "Submitting..." : "Send"}
             </button>
+            {state.succeeded && (
+              <motion.div
+                className={styles.successMessage}
+                initial={{ opacity: 0, scale: 0.6 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Lottie
+                  animationData={doneanimation}
+                  style={{ height: 30, width: 30 }}
+                  loop={false}
+                />
+                <span>done!</span>
+              </motion.div>
+            )}
           </motion.form>
         </div>
       </motion.div>

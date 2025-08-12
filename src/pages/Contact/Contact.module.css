@@ -5,7 +5,6 @@
   min-height: calc(100vh - 40px);
   box-sizing: border-box;
   padding: 20px;
-
 }
 
 .content {
@@ -40,7 +39,9 @@
 
 .animation {
   padding: 0 0 3rem 0;
-
+  max-width: 450px;
+  max-height: 450px;
+  width: 100%;
 }
 
 .form {
@@ -81,26 +82,54 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: #60a5fa;
+  border-color: var(--primary-Mocha);
   background: rgba(255, 255, 255, 0.1);
 }
 
 .button {
-  background-color: #2563eb;
-  color: white;
+  width: 140%;
+  background: var(--primary-Mocha);
+  color: var(--text-color);
   border: none;
-  padding: 0.75rem;
-  border-radius: 8px;
+  padding: 0.9rem 1.75rem;
+  border-radius: 12px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgba(var(--primary-Mocha), 0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
 }
 
 .button:hover {
-  background-color: #1e40af;
+  background: color-mix(in srgb, var(--primary-Mocha) 80%, black 20%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(var(--primary-Mocha), 0.4);
+}
+
+.button:disabled {
+  background: var(--btn-secondary);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(var(--primary-Mocha), 0.1);
+  border: 1px solid rgba(var(--primary-Mocha), 0.3);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 40px;
+
 }
 
 /* Responsive */
@@ -120,12 +149,19 @@
   }
 
   .input,
-  .textarea {
-
+  .textarea,
+  .button {
     width: 100%;
-
   }
 
+  .button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .successMessage {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 400px) {
@@ -145,6 +181,11 @@
 
   .button {
     font-size: 0.9rem;
-    padding: 0.65rem;
+    padding: 0.7rem 1.25rem;
+  }
+
+  .successMessage {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }
