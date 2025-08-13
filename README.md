@@ -1,5 +1,5 @@
 Portfolio Website
-A static portfolio website built with Vite and React, showcasing Home, About, Projects, Experience, Certificates, and Contact sections. This project is designed to be a clean, responsive, and professional frontend-only portfolio with a visitor counter powered by Upstash Redis.
+A static portfolio website built with Vite and React, showcasing Home, About, Projects, Experience and Contact sections. This project is designed to be a clean, responsive, and professional frontend-only portfolio with a visitor counter powered by Upstash Redis.
 Table of Contents
 
 Getting Started
