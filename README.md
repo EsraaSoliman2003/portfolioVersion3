@@ -27,25 +27,24 @@ Project Structure
 your-portfolio/
 ├── public/ # Public assets (images, favicon, etc.)
 │ ├── images/ # Static images for projects, profile, etc.
+│ ├── cv.pdf
 │ └── icon.png
 ├── src/
 │ ├── assets/ # Compiled assets (used in code)
-│ │ ├── images/ # Images imported in components
-│ │ └── fonts/ # Custom fonts (if any)
+│ │ └── animation/ # animations from lottie
 │ ├── components/ # Reusable components
 │ │ ├── Button/
 │ │ │ ├── Button.jsx # Button component
 │ │ │ ├── Button.module.css # Component-specific styles
 │ │ │ └── index.js # Barrel export
 │ │ ├── Card/
-│ │ │ ├── Card.jsx # Card for projects/experience
+│ │ │ ├── Card.jsx # Card for projects/technologies
 │ │ │ ├── Card.module.css
 │ │ │ └── index.js
 │ │ └── ...
 │ ├── data/ # Static data for portfolio content
 │ │ ├── projects.json # Project details (title, description, etc.)
-│ │ ├── experience.json # Work experience details
-│ │ └── about.json # About section content
+│ │ └── technologies.json # Work technologies details
 │ ├── layouts/ # Layout components
 │ │ ├── MainLayout.jsx # Main layout with header
 │ │ └── Header.jsx # Navigation header
@@ -62,15 +61,11 @@ your-portfolio/
 │ │ │ ├── Projects.jsx # Projects page
 │ │ │ ├── Projects.module.css
 │ │ │ └── index.js
-│ │ ├── Experience/
-│ │ │ ├── Experience.jsx # Experience page
-│ │ │ ├── Experience.module.css
+│ │ ├── Technologies/
+│ │ │ ├── Technologies.jsx # Technologies page
+│ │ │ ├── Technologies.module.css
 │ │ │ └── index.js
-│ │ ├── Contact/
-│ │ │ ├── Contact.jsx # Contact page
-│ │ │ ├── Contact.module.css
-│ │ │ └── index.js
-│ │ └── Certificates/
+│ │ └── Contact/
 │ │   ├── Contact.jsx # Contact page
 │ │   ├── Contact.module.css
 │ │   └── index.js
