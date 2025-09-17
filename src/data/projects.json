@@ -220,6 +220,17 @@
     "category": "BackEnd",
     "priority": 16
   },
+    {
+    "ProjectTitle": "CatBlog",
+    "date": "2025",
+    "linkDesine": "-",
+    "linkGithub": "https://github.com/EsraaSoliman2003/Cat-Blog-Web-API.git",
+    "tools": "React & Vite & ASP.NET Core Web API & SQL Server",
+    "imhPath": "/images/projects/22.png",
+    "desc": "Full-stack blog with React frontend and ASP.NET Core Web API backend, featuring JWT auth and admin dashboard.",
+    "category": "BackEnd",
+    "priority": 18
+  },
   {
     "ProjectTitle": "University System",
     "date": "2025",
