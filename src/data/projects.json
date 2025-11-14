@@ -1,5 +1,49 @@
 [
   {
+    "ProjectTitle": "Rafeeq Academy",
+    "date": "2025",
+    "linkDesine": "https://rafeeq-academy.vercel.app",
+    "linkGithub": "https://github.com/EsraaSoliman2003/AcademicPlatform",
+    "tools": "React & Vite & Tailwind",
+    "imhPath": "/images/projects/26.png",
+    "desc": "A modern educational platform offering students a smooth and fast learning experience.",
+    "category": "Top",
+    "priority": 17
+  },
+  {
+    "ProjectTitle": "Cat Blog",
+    "date": "2025",
+    "linkDesine": "https://cute-cat-blog.vercel.app/",
+    "linkGithub": "https://github.com/EsraaSoliman2003/Cat-Blog",
+    "tools": "React & Vite & Tailwind",
+    "imhPath": "/images/projects/23.png",
+    "desc": "An interactive blog for cat lovers with a clean and cute layout for posts and images.",
+    "category": "Top",
+    "priority": 17
+  },
+  {
+    "ProjectTitle": "Dalil Kalba",
+    "date": "2025",
+    "linkDesine": "https://dlil-kalba.vercel.app",
+    "linkGithub": "https://github.com/EsraaSoliman2003/DalilKalbaFullStack",
+    "tools": "ASP.NET & SQL Server & React & Vite",
+    "imhPath": "/images/projects/24.png",
+    "desc": "A complete service platform for Kalba city that organizes local information in a simple and accessible way.",
+    "category": "Top",
+    "priority": 17
+  },
+  {
+    "ProjectTitle": "Coffee Shop",
+    "date": "2025",
+    "linkDesine": "https://cute-coffee-shop.vercel.app",
+    "linkGithub": "https://github.com/EsraaSoliman2003/CoffeeLandingPage",
+    "tools": "React & Vite & Tailwind",
+    "imhPath": "/images/projects/25.png",
+    "desc": "A stylish landing page for a coffee store showcasing products and services in an attractive and smooth design.",
+    "category": "Top",
+    "priority": 17
+  },
+  {
     "ProjectTitle": "Templete",
     "date": "2022",
     "linkDesine": "https://esraasoliman2003.github.io/project1/project1.html",
@@ -220,7 +264,7 @@
     "category": "BackEnd",
     "priority": 16
   },
-    {
+  {
     "ProjectTitle": "CatBlog",
     "date": "2025",
     "linkDesine": "-",

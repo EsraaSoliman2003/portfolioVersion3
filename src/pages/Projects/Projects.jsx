@@ -40,6 +40,16 @@ export default function Projects() {
     exit: { opacity: 0, y: -30, transition: { duration: 0.3 } },
   };
 
+  const handleProjectClick = (project, e) => {
+    if (
+      (project.linkDesine === "-" || !project.linkDesine) &&
+      (project.linkGithub === "-" || !project.linkGithub)
+    ) {
+      e.preventDefault();
+      console.log("No link available for this project");
+    }
+  };
+
   return (
     <div className={styles.projectsContainer}>
       <TypewriterText text="Projects" />
@@ -64,59 +74,118 @@ export default function Projects() {
         animate="visible"
       >
         <AnimatePresence>
-          {filteredProjects.slice(0, 5).map((project, index) => (
-            <motion.div
-              key={project.id || index}
-              className={`${styles.projectItem} ${styles[`item${index + 1}`]}`}
-              variants={itemVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              layout
-            >
-              <a
-                href={
-                  project.linkDesine !== "-"
-                    ? project.linkDesine
-                    : project.linkGithub !== "-"
-                    ? project.linkGithub
-                    : null
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.projectLink}
+          {filteredProjects.map((project, index) => {
+            const hasLink =
+              project.linkDesine !== "-" || project.linkGithub !== "-";
+            const link =
+              project.linkDesine !== "-"
+                ? project.linkDesine
+                : project.linkGithub;
+
+            return (
+              <motion.div
+                key={project.id || index}
+                className={styles.projectItem}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                layout
               >
-                <img
-                  src={project.imhPath}
-                  alt={project.ProjectTitle}
-                  className={styles.projectImg}
-                />
-                {isSmallScreen ? (
-                  <div className={styles.projectText}>
-                    <h2>{project.ProjectTitle}</h2>
-                    <p>
-                      <strong>Date:</strong> {project.date}
-                    </p>
-                    <p>
-                      <strong>Tools:</strong> {project.tools}
-                    </p>
-                  </div>
+                {hasLink ? (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.projectLink}
+                    onClick={(e) => handleProjectClick(project, e)}
+                  >
+                    {isSmallScreen ? (
+                      <div className={styles.mobileProjectContent}>
+                        <div className={styles.mobileImageContainer}>
+                          <img
+                            src={project.imhPath}
+                            alt={project.ProjectTitle}
+                            className={styles.projectImg}
+                          />
+                        </div>
+                        <div className={styles.mobileTextContainer}>
+                          <h2>{project.ProjectTitle}</h2>
+                          <p>
+                            <strong>Date:</strong> {project.date}
+                          </p>
+                          <p>
+                            <strong>Tools:</strong> {project.tools}
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <img
+                          src={project.imhPath}
+                          alt={project.ProjectTitle}
+                          className={styles.projectImg}
+                        />
+                        <div className={styles.projectOverlay}>
+                          <div className={styles.projectText}>
+                            <h2>{project.ProjectTitle}</h2>
+                            <p>
+                              <strong>Date:</strong> {project.date}
+                            </p>
+                            <p>
+                              <strong>Tools:</strong> {project.tools}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </a>
                 ) : (
-                  <div className={styles.projectOverlay}>
-                    <div className={styles.projectText}>
-                      <h2>{project.ProjectTitle}</h2>
-                      <p>
-                        <strong>Date:</strong> {project.date}
-                      </p>
-                      <p>
-                        <strong>Tools:</strong> {project.tools}
-                      </p>
-                    </div>
+                  <div className={styles.projectLink}>
+                    {isSmallScreen ? (
+                      <div className={styles.mobileProjectContent}>
+                        <div className={styles.mobileImageContainer}>
+                          <img
+                            src={project.imhPath}
+                            alt={project.ProjectTitle}
+                            className={styles.projectImg}
+                          />
+                        </div>
+                        <div className={styles.mobileTextContainer}>
+                          <h2>{project.ProjectTitle}</h2>
+                          <p>
+                            <strong>Date:</strong> {project.date}
+                          </p>
+                          <p>
+                            <strong>Tools:</strong> {project.tools}
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <img
+                          src={project.imhPath}
+                          alt={project.ProjectTitle}
+                          className={styles.projectImg}
+                        />
+                        <div className={styles.projectOverlay}>
+                          <div className={styles.projectText}>
+                            <h2>{project.ProjectTitle}</h2>
+                            <p>
+                              <strong>Date:</strong> {project.date}
+                            </p>
+                            <p>
+                              <strong>Tools:</strong> {project.tools}
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 )}
-              </a>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </AnimatePresence>
       </motion.div>
     </div>
