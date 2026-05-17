@@ -1,5 +1,38 @@
 [
   {
+    "ProjectTitle": "Muyasir (Easy Manager) Dashboard",
+    "date": "2026",
+    "linkDesine": "https://muyasir.vercel.app",
+    "linkGithub": "",
+    "tools": "Figma, Next.js, TypeScript, Tailwind CSS",
+    "imhPath": "images/projects/27.png",
+    "desc": "A dashboard to manage tasks and daily work. It gives a simple way to organize and view data.",
+    "category": "Latest",
+    "priority": 3
+  },
+  {
+    "ProjectTitle": "Wafferha Ecommerce",
+    "date": "2026",
+    "linkDesine": "https://wafferha.vercel.app/",
+    "linkGithub": "",
+    "tools": "Figma, Next.js, TypeScript, Tailwind CSS",
+    "imhPath": "images/projects/28.png",
+    "desc": "An online store that gives a fast and easy shopping experience.",
+    "category": "Latest",
+    "priority": 2
+  },
+  {
+    "ProjectTitle": "Taqeemi (My Ratings) Web App",
+    "date": "2026",
+    "linkDesine": "https://taqeemi.vercel.app",
+    "linkGithub": "",
+    "tools": "Figma, Next.js, TypeScript, Tailwind CSS",
+    "imhPath": "images/projects/29.png",
+    "desc": "A platform that shows ratings and reviews from users about shops, services, and cafes.",
+    "category": "Latest",
+    "priority": 1
+  },
+  {
     "ProjectTitle": "Rafeeq Academy",
     "date": "2025",
     "linkDesine": "https://rafeeq-academy.vercel.app",

@@ -5,26 +5,41 @@ import styles from "./Projects.module.css";
 import TypewriterText from "../../components/TypewriterText/TypewriterText";
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState("Top");
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    typeof window !== "undefined" ? window.innerWidth <= 768 : false
+  );
+
+  const order = ["Latest", "Top", "Modern", "Complex", "Native", "BackEnd"];
+
+  const getOrder = (cat) => {
+    const index = order.indexOf(cat);
+    return index === -1 ? 999 : index;
+  };
+
+  const categories = [...new Set(projectsData.map((p) => p.category))].sort(
+    (a, b) => getOrder(a) - getOrder(b)
+  );
+
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768);
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const order = ["Top", "Modern", "Complex", "Native", "BackEnd"];
+  useEffect(() => {
+    if (categories.length && !selectedCategory) {
+      setSelectedCategory(categories[0]);
+    }
+  }, [categories, selectedCategory]);
 
-  const categories = [...new Set(projectsData.map((p) => p.category))].sort(
-    (a, b) => order.indexOf(a) - order.indexOf(b)
+  const filteredProjects = projectsData.filter(
+    (p) => p.category === selectedCategory
   );
-
-  const filteredProjects = projectsData
-    .filter((p) => p.category === selectedCategory)
-    .sort((a, b) => order.indexOf(a.category) - order.indexOf(b.category));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,13 +61,13 @@ export default function Projects() {
       (project.linkGithub === "-" || !project.linkGithub)
     ) {
       e.preventDefault();
-      console.log("No link available for this project");
     }
   };
 
   return (
     <div className={styles.projectsContainer}>
       <TypewriterText text="Projects" />
+
       <div className={styles.filters}>
         {categories.map((cat, i) => (
           <button
@@ -72,11 +87,13 @@ export default function Projects() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        key={selectedCategory}
       >
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {filteredProjects.map((project, index) => {
             const hasLink =
               project.linkDesine !== "-" || project.linkGithub !== "-";
+
             const link =
               project.linkDesine !== "-"
                 ? project.linkDesine
@@ -100,88 +117,48 @@ export default function Projects() {
                     className={styles.projectLink}
                     onClick={(e) => handleProjectClick(project, e)}
                   >
-                    {isSmallScreen ? (
-                      <div className={styles.mobileProjectContent}>
-                        <div className={styles.mobileImageContainer}>
-                          <img
-                            src={project.imhPath}
-                            alt={project.ProjectTitle}
-                            className={styles.projectImg}
-                          />
-                        </div>
-                        <div className={styles.mobileTextContainer}>
-                          <h2>{project.ProjectTitle}</h2>
-                          <p>
-                            <strong>Date:</strong> {project.date}
-                          </p>
-                          <p>
-                            <strong>Tools:</strong> {project.tools}
-                          </p>
-                        </div>
+                    <div className={styles.imageContainer}>
+                      <img
+                        src={project.imhPath}
+                        alt={project.ProjectTitle}
+                        className={styles.projectImg}
+                      />
+                    </div>
+
+                    <div className={styles.projectOverlay}>
+                      <div className={styles.projectInfoCard}>
+                        <h2>{project.ProjectTitle}</h2>
+                        <p>
+                          <strong>Date:</strong> {project.date}
+                        </p>
+                        <p>
+                          <strong>Tools:</strong> {project.tools}
+                        </p>
                       </div>
-                    ) : (
-                      <>
-                        <img
-                          src={project.imhPath}
-                          alt={project.ProjectTitle}
-                          className={styles.projectImg}
-                        />
-                        <div className={styles.projectOverlay}>
-                          <div className={styles.projectText}>
-                            <h2>{project.ProjectTitle}</h2>
-                            <p>
-                              <strong>Date:</strong> {project.date}
-                            </p>
-                            <p>
-                              <strong>Tools:</strong> {project.tools}
-                            </p>
-                          </div>
-                        </div>
-                      </>
-                    )}
+                    </div>
                   </a>
                 ) : (
-                  <div className={styles.projectLink}>
-                    {isSmallScreen ? (
-                      <div className={styles.mobileProjectContent}>
-                        <div className={styles.mobileImageContainer}>
-                          <img
-                            src={project.imhPath}
-                            alt={project.ProjectTitle}
-                            className={styles.projectImg}
-                          />
-                        </div>
-                        <div className={styles.mobileTextContainer}>
-                          <h2>{project.ProjectTitle}</h2>
-                          <p>
-                            <strong>Date:</strong> {project.date}
-                          </p>
-                          <p>
-                            <strong>Tools:</strong> {project.tools}
-                          </p>
-                        </div>
+                  <>
+                    <div className={styles.imageContainer}>
+                      <img
+                        src={project.imhPath}
+                        alt={project.ProjectTitle}
+                        className={styles.projectImg}
+                      />
+                    </div>
+
+                    <div className={styles.projectOverlay}>
+                      <div className={styles.projectInfoCard}>
+                        <h2>{project.ProjectTitle}</h2>
+                        <p>
+                          <strong>Date:</strong> {project.date}
+                        </p>
+                        <p>
+                          <strong>Tools:</strong> {project.tools}
+                        </p>
                       </div>
-                    ) : (
-                      <>
-                        <img
-                          src={project.imhPath}
-                          alt={project.ProjectTitle}
-                          className={styles.projectImg}
-                        />
-                        <div className={styles.projectOverlay}>
-                          <div className={styles.projectText}>
-                            <h2>{project.ProjectTitle}</h2>
-                            <p>
-                              <strong>Date:</strong> {project.date}
-                            </p>
-                            <p>
-                              <strong>Tools:</strong> {project.tools}
-                            </p>
-                          </div>
-                        </div>
-                      </>
-                    )}
-                  </div>
+                    </div>
+                  </>
                 )}
               </motion.div>
             );
